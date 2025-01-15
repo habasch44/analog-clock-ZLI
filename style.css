@@ -1,0 +1,88 @@
+/* Clock Layout */
+
+/* Background styling */
+body {
+    background-image: url("kunst.png");
+  }
+  
+  /* Decorative text */
+  body:before {
+    content: "Kunst tritt in vielen Formen auf!!!!";
+    font-size: 40px;
+    color: rgb(229, 255, 0);
+  }
+  
+  /* Clock container */
+  .clock {
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgb(184, 201, 74);
+    border-radius: 50%; /* Ensures a circular shape */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(104, 212, 165);
+  }
+  
+  /* Outer clock face */
+  .outer-clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: top center;
+  }
+  
+  /* Inner clock face */
+  .inner-clock-face {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Center clock face (cover) */
+  .cover-clock-face {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%; /* Circular cover */
+    transform: translate(-50%, -50%);
+  }
+  
+  /* General hand styling */
+  .hand {
+    position: absolute;
+    width: 4px;
+    height: 50%; /* General length adjustment */
+    top: 0; /* Align to center */
+    left: 50%;
+    transform-origin: bottom center; /* Anchor hands at the bottom for rotation */
+    transform: rotate(90deg); /* Initial alignment */
+    transition: all 0.05s ease-in-out;
+    background: black; /* Default color for hands */
+  }
+  
+  /* Hour hand styling */
+  .hour-hand {
+    height: 35%; /* Shorter for the hour hand */
+    background: black;
+  }
+  
+  /* Minute hand styling */
+  .min-hand {
+    height: 45%; /* Medium length for the minute hand */
+    background: gray;
+  }
+  
+  /* Second hand styling */
+  .second-hand {
+    height: 50%; /* Longest for the second hand */
+    background: red;
+  }
+  

@@ -1,0 +1,58 @@
+/* Clock Layout */
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgb(68, 223, 228);
+    border-radius: 100%;
+    position: absolute;
+
+    background: #ffffff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .outer-clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: top center;
+  }
+  
+  .inner-clock-face {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+  }
+  
+  .hand {
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 50%; /* General length adjustment */
+    top: 50%;
+    left: 50%;
+    transform-origin:bottom center; /* Anchor hands at bottom for rotation */
+    transform: rotate(90deg); /* Initial alignment */
+    transition: all 0.05s ease-in-out;
+  }
+  
+  .hour-hand {
+    height: 35%; /* Shorter for hour hand */
+    background: rgb(4, 69, 234);
+  }
+  
+  .min-hand {
+    height: 45%; /* Medium length for minute hand */
+    background: rgb(228, 37, 238);
+  }
+  
+  .second-hand {
+    height: 50%; /* Full length for second hand */
+    background: red;
+  }
+  
